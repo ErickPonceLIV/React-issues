@@ -1,8 +1,20 @@
-# React + Vite
+## Ejercicio 1: React Issues
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En el repositorio de GitHub de React, existe una sección donde se muestran los issues del proyecto: [https://github.com/facebook/react/issues](https://github.com/facebook/react/issues).
 
-Currently, two official plugins are available:
+Desarrolla un programa en React con componentes que consulte la API de los issues del proyecto de React y muestre un listado de los issues en la pantalla, con las siguientes características:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Al cargar la página, se mostrará el listado de issues, donde cada ítem del listado deberá:
+  - Mostrar el id del issue.
+  - Mostrar el título del issue.
+  - Mostrar el nombre del usuario que abrió el issue.
+  - Cuando se haga clic en un título, deberá redirigir al enlace que tiene el detalle del issue en GitHub (`html_url`).
+
+**Plus:**
+- Mostrar los labels a los que pertenece cada issue (ejemplo: Status: Unconfirmed, React 18, etc.).
+- Elaborar una barra de búsqueda que permita filtrar los resultados traídos por la API.
+
+**Consideraciones:**
+- Las llamadas a la API deberán estar dentro del hook de React `useEffect()`.
+- El endpoint a utilizar con la información de los issues es: `https://api.github.com/repos/facebook/react/issues`.
+- Un ejemplo funcional podría ser similar a este: [https://josemiguelvazquez.github.io/react-issues-app/](https://josemiguelvazquez.github.io/react-issues-app/).
